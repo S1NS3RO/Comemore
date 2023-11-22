@@ -1,7 +1,14 @@
 header {
-  background: blue;
   .header-container {
+    display: flex;
+    justify-content: space-between;
     width: 100%;
     max-width: var(--global-max-width);
+    color: white;
+
+    ul {
+      display: flex;
+      gap: 10px;
+    }
   }
 }

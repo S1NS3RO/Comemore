@@ -10,6 +10,10 @@
   font-family: Sans-Serif;
 }
 
+li {
+  list-style: none;
+}
+
 body {
   background: var(--primary-collor);
   max-width: var(--global-max-width);
