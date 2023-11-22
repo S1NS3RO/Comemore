@@ -1,0 +1,26 @@
+:root {
+  --global-max-width: 1280px;
+  --primary-collor: #101728;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Sans-Serif;
+}
+
+body {
+  background: var(--primary-collor);
+  max-width: var(--global-max-width);
+  margin: 0 auto;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  main {
+    flex-grow: 1;
+    color: white;
+  }
+}

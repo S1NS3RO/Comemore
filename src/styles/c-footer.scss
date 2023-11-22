@@ -1,0 +1,13 @@
+footer {
+  background: blue;
+
+  .footer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-size: 0.8rem;
+    color: white;
+    max-width: var(--global-max-width);
+  }
+}

@@ -1,0 +1,7 @@
+header {
+  background: blue;
+  .header-container {
+    width: 100%;
+    max-width: var(--global-max-width);
+  }
+}
