@@ -14,6 +14,11 @@ li {
   list-style: none;
 }
 
+a {
+  text-decoration: none;
+  color: currentColor;
+}
+
 body {
   background: var(--primary-collor);
   max-width: var(--global-max-width);

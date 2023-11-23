@@ -1,7 +1,21 @@
+import '@/styles/p-home.scss'
+import Button from '@/components/Button'
+
 export default function Home() {
   return (
     <>
-      <h1>Home</h1>
+      <div className='home'>
+        <div className='home-text'>
+          <h1>Seu evento conectado</h1>
+          <Button text={'Saber mais'} />
+        </div>
+        <div className='home-img'>
+          <img
+            src='./1.png'
+            alt='Comemore'
+          />
+        </div>
+      </div>
     </>
   )
 }

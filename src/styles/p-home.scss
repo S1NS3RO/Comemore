@@ -1,0 +1,36 @@
+// O css principal é mobile first
+:root {
+  --home-img-size: 250px;
+}
+.home {
+  display: flex;
+  flex-flow: column;
+  gap: 3rem;
+
+  .home-text {
+    font-size: 25px;
+  }
+
+  .home-img {
+    box-shadow: 0 0 30px 30px #1f41bb;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: var(--home-img-size);
+    height: var(--home-img-size);
+  }
+
+  .home-img img {
+    border-radius: 5px;
+    width: var(--home-img-size);
+    height: var(--home-img-size);
+  }
+}
+
+//css modificado para telas maiores
+@media (min-width: 600px) {
+  .home {
+    flex-direction: row;
+  }
+}
