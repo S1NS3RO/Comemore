@@ -7,10 +7,14 @@ const handleLogin = () => {
   alert('Login')
 }
 
+const handleCreateAccount = () => {
+  alert('Criar conta')
+}
+
 export default function Login() {
   return (
     <>
-      <h1>Login</h1>
+      <h1>Conectar-se</h1>
       <form>
         <label>
           <input
@@ -26,11 +30,17 @@ export default function Login() {
             placeholder='Senha'
           />
         </label>
-        <Button
-          type='submit'
-          text='Login'
-          onClick={handleLogin}
-        />
+        <div className='actions'>
+          <Button
+            text='Entrar'
+            onClick={handleLogin}
+          />
+          <Button
+            text='Criar conta'
+            onClick={handleCreateAccount}
+          />
+        </div>
+        <a href='#'>Esqueci minha senha</a>
       </form>
     </>
   )
