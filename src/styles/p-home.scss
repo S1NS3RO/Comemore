@@ -46,5 +46,26 @@
     align-items: center;
     justify-content: center;
     padding: 2rem;
+    height: 100%;
   }
+
+  .home-text {
+    font-size: 50px;
+  }
+
+  .home button {
+    padding: 300px;
+  }
+
+  .home-img img {
+    width: 400px;
+    height: 400px;
+  }
+
+  .home-img img {
+    box-shadow: 0 0 100px 30px rgb(31, 65, 187, 0.5);
+    border-radius: 10px;
+    }
 }
+
+
