@@ -1,0 +1,38 @@
+h1 {
+  text-align: center;
+}
+
+.plans {
+  display: flex;
+  gap: 1rem;
+  padding: 2rem;
+  justify-content: center;
+  max-width: 600px;
+
+  .plan {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .price {
+    height: 100px;
+    background: black;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  li {
+    list-style: inside;
+    line-height: 1.2rem;
+  }
+}
