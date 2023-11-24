@@ -12,10 +12,10 @@ export default function Header() {
               <Link href='/'>Home</Link>
             </li>
             <li>
-              <Link href='/login'>Login</Link>
+              <Link href='/comprar'>Comprar</Link>
             </li>
             <li>
-              <Link href='/comprar'>Comprar</Link>
+              <Link href='/login'>Login</Link>
             </li>
           </ul>
         </nav>

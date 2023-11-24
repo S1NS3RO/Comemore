@@ -1,47 +1,49 @@
+'use client'
 import '@/styles/p-comprar.scss'
-import Button from "@/components/Button"
+import Button from '@/components/Button'
+import { listPlans } from '@/data/plans'
+
+const handleBuy = (plano: string): void => {
+  alert(`Comprar plano ${plano}`)
+}
 
 export default function Comprar() {
   return (
     <>
-      <h1>Seja parte do grupo Comemore</h1>
+      <h1>
+        Seja parte do grupo <span className='site-name'>Comemore</span>
+      </h1>
       <div className='plans'>
-        <div className='plan'>
-          <h1>Plano platinium</h1>
-          <div className='price'>
-            R$ 24,99
-            <div>Mensal</div>
-          </div>
-          <ul>
-            <li>
-              Disponibilizar link para que seus convidados possam confirmar a
-              presença.
-            </li>
-            <li>
-              Disponibilizar informações sobre seu evento para seus convidados.
-            </li>
-            <li>Sistema para verificar quais pessoas confirmaram presença.</li>
-          </ul>
-          <Button text="Comprar" href="/login"/>
-        </div>
-        <div className='plan'>
-          <h1>Plano Mega</h1>
-          <div className='price'>
-            R$ 65,99
-            <div>Trimestral</div>
-          </div>
-          <ul>
-            <li>
-              Disponibilizar link para que seus convidados possam confirmar a
-              presença.
-            </li>
-            <li>
-              Disponibilizar informações sobre seu evento para seus convidados.
-            </li>
-            <li>Sistema para verificar quais pessoas confirmaram presença.</li>
-          </ul>
-          <Button text="Comprar" href="/login"/>
-        </div>
+        {listPlans.map(({ id, isActive, name, price, period, benefits }) => (
+          <>
+            {isActive && (
+              <div
+                className='plan'
+                key={id}>
+                <h1>Plano {name}</h1>
+                <div className='price'>
+                  <span>
+                    {price.toLocaleString('pt-BR', {
+                      style: 'currency',
+                      currency: 'BRL'
+                    })}
+                  </span>
+
+                  <p>{period}</p>
+                </div>
+                <ul>
+                  {Object.values(benefits).map((benefit, index) => (
+                    <li key={index}>{benefit}</li>
+                  ))}
+                </ul>
+                <Button
+                  text='Comprar'
+                  onClick={() => handleBuy(name)}
+                />
+              </div>
+            )}
+          </>
+        ))}
       </div>
     </>
   )
