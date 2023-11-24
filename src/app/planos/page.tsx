@@ -1,5 +1,5 @@
 'use client'
-import '@/styles/p-comprar.scss'
+import '@/styles/p-planos.scss'
 import Button from '@/components/Button'
 import { listPlans } from '@/data/plans'
 
