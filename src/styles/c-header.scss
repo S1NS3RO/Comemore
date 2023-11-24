@@ -1,19 +1,62 @@
 header {
+  width: 100%;
+  box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 0.2);
+  position: relative;
+
   .header-container {
+    background: var(--secondary-color);
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    justify-content: space-between;
     width: 100%;
     max-width: var(--global-max-width);
     color: white;
     font-size: 24px;
     font-weight: bold;
-    padding: 1rem 0;
-    box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+
+    svg {
+      font-size: 35px !important;
+    }
 
     ul {
       display: flex;
       gap: 1rem;
     }
+  }
+}
+
+.menu-open {
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: translateY(-100%);
+  background: var(--secondary-color);
+  color: white;
+  width: 250px;
+  animation: openmenu 0.2s ease-out forwards;
+  overflow: hidden;
+  gap: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  z-index: 1;
+  box-shadow: -2px 2px 5px 2px rgba(0, 0, 0, 0.2);
+
+  ul {
+    flex-direction: column;
+  }
+
+  .profile {
+    border: 1px solid red;
+  }
+}
+
+@keyframes openmenu {
+  to {
+    top: calc(0px + 100%);
+    transform: translateY(0);
   }
 }

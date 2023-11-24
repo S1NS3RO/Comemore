@@ -23,7 +23,7 @@ h1 {
   }
 
   .price {
-    background: rgb(0, 0, 0, 0.5);
+    background: var(--secondary-color);
     padding: 0.6rem;
     border-radius: 10px;
     display: flex;
