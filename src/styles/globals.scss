@@ -1,6 +1,7 @@
 :root {
   --global-max-width: 1280px;
-  --primary-collor: #101728;
+  --primary-color: hsl(222.5, 42.9%, 11%);
+  --secondary-color: hsl(222, 42.9%, 8%);
 }
 
 * {
@@ -20,16 +21,25 @@ a {
 }
 
 body {
-  background: var(--primary-collor);
+  background: var(--primary-color);
   max-width: var(--global-max-width);
   margin: 0 auto;
   height: 100vh;
   width: 100%;
   display: flex;
   flex-direction: column;
+}
 
-  main {
-    flex-grow: 1;
-    color: white;
-  }
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+  color: white;
+  gap: 1.5rem;
+  padding-top: 2rem;
+}
+
+.site-name {
+  color: #9340ff;
 }
