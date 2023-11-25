@@ -3,7 +3,7 @@ import '@/styles/c-header.scss'
 
 import Link from 'next/link'
 import { useState, useEffect, useRef } from 'react'
-import { HeaderNav } from './HeaderNav.tsx'
+import { HeaderNav } from './HeaderNav'
 import { CiLogin } from 'react-icons/ci'
 import { IoMenu } from 'react-icons/io5'
 
