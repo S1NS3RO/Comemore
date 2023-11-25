@@ -8,9 +8,13 @@ import { CiLogin } from 'react-icons/ci'
 import { IoMenu } from 'react-icons/io5'
 
 export default function Header() {
-  const [isMobile, setIsMobile] = useState(false)
+  const [isMobile, setIsMobile] = useState(true)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const menuRef = useRef<HTMLDivElement | null>(null)
+
+  const handleMenuClose = (): void => {
+    setIsMenuOpen(false)
+  }
 
   useEffect(() => {
     const handleCloseMenu = (event: MouseEvent): void => {
@@ -31,7 +35,7 @@ export default function Header() {
       } else {
         setIsMobile(false)
       }
-      //setIsMenuOpen(false)
+      handleMenuClose()
     }
 
     window.addEventListener('resize', updateWindowDimensions)
@@ -42,7 +46,6 @@ export default function Header() {
       window.removeEventListener('resize', updateWindowDimensions)
     }
   }, [])
-
   return (
     <header>
       <div className='header-container'>
@@ -67,9 +70,11 @@ export default function Header() {
           ref={menuRef}
           className='menu-open'>
           <h3>Bem Vindo</h3>
-          <HeaderNav />
+          <HeaderNav handleMenuClose={handleMenuClose} />
           <div className='profile'>
-            <Link href='/login'>
+            <Link
+              onClick={() => handleMenuClose()}
+              href='/login'>
               <CiLogin /> Login
             </Link>
           </div>
