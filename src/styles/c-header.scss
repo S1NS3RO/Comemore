@@ -38,7 +38,7 @@ header {
   width: 250px;
   animation: openmenu 0.2s ease-out forwards;
   overflow: hidden;
-  gap: 0.5rem;
+  gap: 1rem;
   display: flex;
   flex-direction: column;
   padding: 1rem;
@@ -46,11 +46,42 @@ header {
   box-shadow: -2px 2px 5px 2px rgba(0, 0, 0, 0.2);
 
   ul {
+    display: flex;
     flex-direction: column;
+    gap: 0.5rem;
+
+    li {
+      position: relative;
+      border-radius: 2px;
+      overflow: hidden;
+
+      a {
+        width: 100%;
+        display: flex;
+        padding: 0.5rem;
+      }
+    }
+    li:hover {
+      background: hsl(217, 32.6%, 17.5%);
+    }
   }
 
   .profile {
-    border: 1px solid red;
+
+    a {
+      display: flex;
+      justify-content: center;
+      gap: 4px;
+      width: 100%;
+      background: hsl(217, 32.6%, 17.5%);
+      padding: 0.5rem;
+      border-radius: 2px;
+    }
+
+    svg {
+      position: relative;
+      top: 2px;
+    }
   }
 }
 
