@@ -1,11 +1,14 @@
-
+'use client'
 import Link from 'next/link'
 
-export function HeaderNav() {
+interface HeaderNavProps {
+  handleMenuClose?: () => void
+}
+export function HeaderNav({ handleMenuClose }: HeaderNavProps) {
   return (
     <>
       <nav>
-        <ul>
+        <ul onClick={() => handleMenuClose && handleMenuClose()}>
           <li>
             <Link href='/planos'>Planos</Link>
           </li>
