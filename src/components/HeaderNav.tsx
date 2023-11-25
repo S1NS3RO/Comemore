@@ -12,6 +12,9 @@ export function HeaderNav({ handleMenuClose }: HeaderNavProps) {
           <li>
             <Link href='/planos'>Planos</Link>
           </li>
+          <li>
+            <Link href='/about'>Saiba mais</Link>
+          </li>
         </ul>
       </nav>
     </>

@@ -1,15 +1,10 @@
 // O css principal é mobile first
-:root {
-  --home-img-size: 70%;
-}
-
 .home {
   gap: 3rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  height: max-content;
   max-width: 100%;
 }
 
