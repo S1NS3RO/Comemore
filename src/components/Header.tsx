@@ -18,7 +18,10 @@ export default function Header() {
 
   useEffect(() => {
     const handleCloseMenu = (event: MouseEvent): void => {
-      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+      if (
+        !menuRef?.current?.contains(event?.target as Node) &&
+        !(event.target as HTMLElement)?.classList?.contains('openmenu')
+      ) {
         setIsMenuOpen(false)
       }
     }
@@ -34,8 +37,8 @@ export default function Header() {
         setIsMobile(true)
       } else {
         setIsMobile(false)
+        handleMenuClose()
       }
-      handleMenuClose()
     }
 
     window.addEventListener('resize', updateWindowDimensions)
@@ -54,7 +57,9 @@ export default function Header() {
         </div>
         {!isMobile ? (
           <>
-            <HeaderNav />
+            <div>
+              <HeaderNav />
+            </div>
             <div className='profile'>
               <Link href='/login'>
                 <CiLogin /> Login
@@ -62,7 +67,10 @@ export default function Header() {
             </div>
           </>
         ) : (
-          <IoMenu onClick={() => setIsMenuOpen(!isMenuOpen)} />
+          <IoMenu
+            className='openmenu'
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          />
         )}
       </div>
       {isMenuOpen && (
