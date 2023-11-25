@@ -10,11 +10,11 @@ import { IoMenu } from 'react-icons/io5'
 export default function Header() {
   const [isMobile, setIsMobile] = useState(false)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const menuRef = useRef(null)
+  const menuRef = useRef<HTMLDivElement | null>(null)
 
   useEffect(() => {
-    const handleCloseMenu = event => {
-      if (menuRef.current && !menuRef.current.contains(event.target)) {
+    const handleCloseMenu = (event: MouseEvent): void => {
+      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
         setIsMenuOpen(false)
       }
     }
@@ -70,7 +70,7 @@ export default function Header() {
           <HeaderNav />
           <div className='profile'>
             <Link href='/login'>
-              <CiLogin />{' '}Login
+              <CiLogin /> Login
             </Link>
           </div>
         </div>
