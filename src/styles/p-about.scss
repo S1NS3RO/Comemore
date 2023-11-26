@@ -7,7 +7,7 @@
     width: 100%;
     padding: 1rem;
     min-height: 700px;
-    height: 100vh;
+    height: 100dvh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -19,13 +19,13 @@
   p {
     text-align: center;
   }
-  
+
   img {
-  width: 300px;
-  height: 300px;
-  box-shadow: 0 0 100px 30px rgb(31, 65, 187, 0.5);
-  border-radius: 10px;
-}
+    width: 300px;
+    height: 300px;
+    box-shadow: 0 0 100px 30px rgb(31, 65, 187, 0.5);
+    border-radius: 10px;
+  }
 
   .faleconosco {
     width: 100%;
