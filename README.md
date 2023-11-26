@@ -1,4 +1,5 @@
 ## Projeto Comemore
 
 Desenvolvimento:
-Douglas Vargas e Vithor Martins
+Douglas Vargas
+Vithor Martins
