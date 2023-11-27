@@ -22,7 +22,8 @@ export const listPlans = [
     price: 0,
     period: '30 Dias',
     benefits: {
-      a: `Grátis`
+      a: `Grátis`,
+      b: `Teste`
     }
   },
   {
