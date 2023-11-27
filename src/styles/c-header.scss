@@ -1,17 +1,107 @@
 header {
+  width: 100%;
+  box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 0.2);
+  position: relative;
+  background: var(--secondary-color);
+
   .header-container {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    justify-content: space-between;
     width: 100%;
     max-width: var(--global-max-width);
     color: white;
     font-size: 24px;
     font-weight: bold;
+    padding: 1rem;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
 
     ul {
       display: flex;
       gap: 1rem;
     }
+
+    // Versão telas grandes
+    /* .header-container => .profile */
+    .profile {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 4px;
+
+      svg {
+        position: relative;
+        top: 2px;
+      }
+    }
+  }
+
+  // Versão mobile
+  /* header => .menu-open */
+  .menu-open {
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translateY(-100%);
+    background: var(--secondary-color);
+    color: white;
+    width: 250px;
+    animation: openmenu 0.2s ease-out forwards;
+    overflow: hidden;
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    z-index: 1;
+    box-shadow: -2px 2px 5px 2px rgba(0, 0, 0, 0.2);
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+
+      li {
+        position: relative;
+        border-radius: 4px;
+        overflow: hidden;
+        background: hsl(217, 32.6%, 15%);
+
+        a {
+          width: 100%;
+          display: flex;
+          padding: 0.5rem;
+        }
+      }
+
+      li:hover {
+        background: hsl(217, 32.6%, 17.5%);
+      }
+    }
+
+    /* .menu-open => .profile */
+    .profile {
+      a {
+        display: flex;
+        justify-content: center;
+        gap: 4px;
+        width: 100%;
+        background: hsl(217, 32.6%, 17.5%);
+        padding: 0.5rem;
+        border-radius: 2px;
+      }
+
+      svg {
+        position: relative;
+        top: 2px;
+      }
+    }
+  }
+}
+
+@keyframes openmenu {
+  to {
+    top: calc(0px + 100%);
+    transform: translateY(0);
   }
 }

@@ -1,25 +1,93 @@
+'use client'
 import '@/styles/c-header.scss'
 
-import Link from "next/link"
+import Link from 'next/link'
+import { useState, useEffect, useRef } from 'react'
+import { HeaderNav } from './HeaderNav'
+import { CiLogin } from 'react-icons/ci'
+import { IoMenu } from 'react-icons/io5'
 
 export default function Header() {
+  const [isMobile, setIsMobile] = useState(true)
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const menuRef = useRef<HTMLDivElement | null>(null)
+
+  const handleMenuClose = (): void => {
+    setIsMenuOpen(false)
+  }
+
+  useEffect(() => {
+    const handleCloseMenu = (event: MouseEvent): void => {
+      if (
+        !menuRef?.current?.contains(event?.target as Node) &&
+        !(event.target as HTMLElement)?.classList?.contains('openmenu')
+      ) {
+        setIsMenuOpen(false)
+      }
+    }
+    document.addEventListener('mousedown', handleCloseMenu)
+    return () => {
+      document.removeEventListener('mousedown', handleCloseMenu)
+    }
+  }, [menuRef])
+
+  useEffect(() => {
+    const updateWindowDimensions = () => {
+      if (window.innerWidth <= 600) {
+        setIsMobile(true)
+      } else {
+        setIsMobile(false)
+        handleMenuClose()
+      }
+    }
+
+    window.addEventListener('resize', updateWindowDimensions)
+
+    updateWindowDimensions()
+
+    return () => {
+      window.removeEventListener('resize', updateWindowDimensions)
+    }
+  }, [])
   return (
     <header>
       <div className='header-container'>
-        <nav>
-          <ul>
-            <li>
-              <Link href='/'>Home</Link>
-            </li>
-            <li>
-              <Link href='/login'>Login</Link>
-            </li>
-            <li>
-              <Link href='/comprar'>Comprar</Link>
-            </li>
-          </ul>
-        </nav>
+        <div className='logo'>
+          <Link href='/'>Comemore</Link>
+        </div>
+        {!isMobile ? (
+          <>
+            <div>
+              <HeaderNav />
+            </div>
+            <div className='profile'>
+              <Link href='/login'>
+                <CiLogin /> Login
+              </Link>
+            </div>
+          </>
+        ) : (
+          <IoMenu
+            className='openmenu'
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          />
+        )}
       </div>
+      {isMenuOpen && (
+        <div
+          ref={menuRef}
+          className='menu-open'>
+          <h3>Bem Vindo</h3>
+          <HeaderNav handleMenuClose={handleMenuClose} />
+          <div className='profile'>
+            <Link
+              onClick={() => handleMenuClose()}
+              href='/login'>
+              <CiLogin /> Login
+            </Link>
+          </div>
+        </div>
+      )}
     </header>
   )
 }

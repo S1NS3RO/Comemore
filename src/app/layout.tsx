@@ -7,7 +7,7 @@ import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
   title: 'Comemore',
-  description: 'É um prazer comemorar com você'
+  description: 'É um prazer comemorar momentos especiais com você'
 }
 
 export default function RootLayout({
