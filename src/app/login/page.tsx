@@ -13,7 +13,7 @@ const handleCreateAccount = () => {
 
 export default function Login() {
   return (
-    <>
+    <div className='p-login'>
       <h1>Conectar-se</h1>
       <form>
         <label>
@@ -42,6 +42,6 @@ export default function Login() {
         </div>
         <a href='#'>Esqueci minha senha</a>
       </form>
-    </>
+    </div>
   )
 }

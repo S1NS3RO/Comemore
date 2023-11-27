@@ -2,9 +2,9 @@ header {
   width: 100%;
   box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 0.2);
   position: relative;
+  background: var(--secondary-color);
 
   .header-container {
-    background: var(--secondary-color);
     display: flex;
     justify-content: space-between;
     width: 100%;
