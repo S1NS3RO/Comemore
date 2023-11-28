@@ -8,6 +8,7 @@ header {
     display: flex;
     justify-content: space-between;
     width: 100%;
+    background: var(--secondary-color);
     max-width: var(--global-max-width);
     color: white;
     font-size: 24px;
@@ -16,6 +17,24 @@ header {
     margin: 0 auto;
     position: relative;
     z-index: 2;
+
+    .navigation {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      position: relative;
+    }
+
+    .navigation::before {
+      content: '';
+      width: 10px;
+      left: 50%;
+      transform: translate(-50%);
+      background: red;
+      height: 4px;
+      position: absolute;
+      bottom: 0;
+    }
 
     ul {
       display: flex;

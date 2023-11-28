@@ -51,38 +51,36 @@ export default function Header() {
   }, [])
   return (
     <header>
-      <div className='header-container'>
-        <div className='logo'>
-          <Link href='/'>Comemore</Link>
-        </div>
+      <div className="header-container">
         {!isMobile ? (
-          <>
+          <div className="navigation">
+            <div className="logo">
+              <Link href="/">Comemore</Link>
+            </div>
             <div>
               <HeaderNav />
             </div>
-            <div className='profile'>
-              <Link href='/login'>
+            <div className="profile">
+              <Link href="/login">
                 <CiLogin /> Login
               </Link>
             </div>
-          </>
+          </div>
         ) : (
-          <IoMenu
-            className='openmenu'
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          />
+          <div className="navigation">
+            <div className="logo">
+              <Link href="/">Comemore</Link>
+            </div>
+            <IoMenu className="openmenu" onClick={() => setIsMenuOpen(!isMenuOpen)} />
+          </div>
         )}
       </div>
       {isMenuOpen && (
-        <div
-          ref={menuRef}
-          className='menu-open'>
+        <div ref={menuRef} className="menu-open">
           <h3>Bem Vindo</h3>
           <HeaderNav handleMenuClose={handleMenuClose} />
-          <div className='profile'>
-            <Link
-              onClick={() => handleMenuClose()}
-              href='/login'>
+          <div className="profile">
+            <Link onClick={() => handleMenuClose()} href="/login">
               <CiLogin /> Login
             </Link>
           </div>

@@ -9,6 +9,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: Sans-Serif;
+  scroll-behavior: smooth;
 }
 
 li {
@@ -18,6 +19,7 @@ li {
 a {
   text-decoration: none;
   color: currentColor;
+  cursor: pointer;
 }
 
 body {
@@ -36,7 +38,6 @@ main {
   flex-grow: 1;
   color: white;
   gap: 1.5rem;
-  padding-top: 2rem;
   max-width: var(--global-max-width);
   margin: 0 auto;
   width: 100%;
