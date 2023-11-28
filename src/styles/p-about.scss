@@ -79,34 +79,23 @@ main {
     }
 
   }
+}
 
+.page1 {
   .content {
-    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    max-width: 650px;
+    gap: 1rem;
+    width: 100%;
 
     h1 {
-      font-size: 50px;
+      font-size: 35px;
     }
 
     p {
-      font-size: 35px;
+      font-size: 20px;
     }
   }
-
-  .page1 {
-    .content {
-      display: flex;
-      flex-direction: column;
-      max-width: 650px;
-      gap: 1rem;
-      width: 100%;
-
-      h1 {
-        font-size: 35px;
-      }
-
-      p {
-        font-size: 20px;
-      }
-    }
-  }
+}
 }
