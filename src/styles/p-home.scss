@@ -29,7 +29,6 @@
 
 //css modificado para telas maiores
 @media (min-width: 600px) {
-
   .home {
     display: flex;
     flex-direction: row;
@@ -47,10 +46,6 @@
     font-size: 50px;
   }
 
-  .home button {
-    padding: 300px;
-  }
-
   .home-img img {
     width: 400px;
     height: 400px;
@@ -59,7 +54,13 @@
   .home-img img {
     box-shadow: 0 0 100px 30px rgb(31, 65, 187, 0.5);
     border-radius: 10px;
-    }
+  }
 }
 
-
+@media (min-width: 1400px) {
+  .site-button {
+    padding: 30px 50px !important;
+    font-size: 30px !important;
+    border-radius: 50px !important;
+  }
+}
