@@ -67,6 +67,25 @@ main {
 
 // Notebook
 @media (min-width: 600px) {
+  .p-about {
+    h1 {
+      font-size: 35px;
+    }
+
+    p {
+      font-size: 20px;
+    }
+  }
+
+  .page1 {
+    .content {
+      display: flex;
+      flex-direction: column;
+      max-width: 650px;
+      gap: 1rem;
+      width: 100%;
+    }
+  }
 
   .page2,
   .page3 {
@@ -79,23 +98,4 @@ main {
     }
 
   }
-}
-
-.page1 {
-  .content {
-    display: flex;
-    flex-direction: column;
-    max-width: 650px;
-    gap: 1rem;
-    width: 100%;
-
-    h1 {
-      font-size: 35px;
-    }
-
-    p {
-      font-size: 20px;
-    }
-  }
-}
 }
