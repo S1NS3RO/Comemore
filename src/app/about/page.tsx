@@ -9,7 +9,7 @@ export default function About() {
       <div className='page1'>
       <div className="content">
         <h1>
-          A <span className='site-name'> Comemore</span> transforma seus eventos
+          A <span className='site-name'>Comemore</span> transforma seus eventos
           e simplifica suas celebrações!
         </h1>
         <p>
@@ -22,7 +22,7 @@ export default function About() {
       </div>
       <div className='page2'>
         <div className='content'>
-          <h1>Informe seus convidados</h1>
+          <h1>Informe seus <span className='site-name'>convidados</span></h1>
           <p>
             Com a Comemore, você deixa seus convidados informados com um status
             online de todas as informações disponibilizadas por você, como:
@@ -40,7 +40,7 @@ export default function About() {
           alt=''
         />
         <div className='content'>
-          <h1>Mantenha-se atualizado</h1>
+          <h1>Mantenha-se <span className='site-name'>atualizado</span></h1>
           <p>
             Com nosso sistema online você poderá a partir de um link verificar o
             status de confirmação de seus usuários. Com dados como: Nome,
