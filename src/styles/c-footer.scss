@@ -15,7 +15,7 @@ footer {
     margin: 0 auto;
     gap: 6px;
     position: relative;
-    padding: 0.5rem;
+    padding: 1rem;
     flex-direction: column;
 
     .social {
@@ -41,15 +41,4 @@ footer {
       }
     }
   }
-}
-
-.footer-container::before {
-  content: '';
-  background: #cdc5c5;
-  width: 100px;
-  height: 1px;
-  top: 0;
-  left: 50%;
-  transform: translate(-50%);
-  position: absolute;
 }
