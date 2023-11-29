@@ -1,9 +1,5 @@
 ## Projeto Comemore!
 
-Desenvolvimento:<br/>
-Douglas Vargas<br/>
-Vithor Martins
-
->[!NOTE]
+> [!Desenvolvedores!]
 >
->This is a standard NOTE block.
+> Douglas Vargas & Vithor Martins
