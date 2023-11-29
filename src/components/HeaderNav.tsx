@@ -19,7 +19,7 @@ export function HeaderNav({ handleMenuClose }: HeaderNavProps) {
         <ul onClick={() => handleMenuClose && handleMenuClose()}>
           <li>
             <Link
-              className={pathname === '/' ? 'active' : ''}
+              className={pathname === '/planos' ? 'active' : ''}
               href='/planos'
               passHref>
               Ver planos
@@ -27,7 +27,7 @@ export function HeaderNav({ handleMenuClose }: HeaderNavProps) {
           </li>
           <li>
             <Link
-              className={pathname === '/' ? 'active' : ''}
+              className={pathname === '/about' ? 'active' : ''}
               href='/about'
               passHref>
               Saber mais
