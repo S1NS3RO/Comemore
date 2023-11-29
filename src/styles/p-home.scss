@@ -1,6 +1,7 @@
-footer {
-  display: none;
-}
+// footer {
+//   display: none;
+// }
+
 // O css principal é mobile first
 .p-home {
   gap: 3rem;
@@ -40,8 +41,8 @@ footer {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center !important;
-    padding: 5rem 0;
+    justify-content: center;
+    flex-grow: 1;
 
     .home-text {
       font-size: 35px;
