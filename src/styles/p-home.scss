@@ -1,3 +1,6 @@
+footer {
+  display: none;
+}
 // O css principal é mobile first
 .p-home {
   gap: 3rem;
@@ -7,6 +10,7 @@
   width: 100%;
   padding: 2rem 0.5rem;
   overflow: hidden;
+  flex-grow: 1;
 
   .home-text {
     font-size: 25px;
@@ -15,7 +19,7 @@
     flex-direction: column;
     align-items: center;
     max-width: 500px;
-
+    z-index: 1;
 
     h1 {
       text-align: center;
@@ -30,11 +34,8 @@
   }
 }
 
-//css telas maiores
-@media (min-width: 1400px) {}
-
 // css notebook
-@media (min-width: 600px) {
+@media (min-width: 960px) {
   .p-home {
     display: flex;
     flex-direction: row;
@@ -42,27 +43,13 @@
     justify-content: center !important;
     padding: 5rem 0;
 
-    .home-img {
-      width: 400px;
-      height: 400px;
-    }
-
     .home-text {
       font-size: 35px;
     }
 
-    .home button {
-      padding: 300px;
-    }
-
     .home-img img {
       width: 400px;
       height: 400px;
-    }
-
-    .home-img img {
-      box-shadow: 0 0 100px 30px rgb(31, 65, 187, 0.5);
-      border-radius: 10px;
     }
   }
 }

@@ -25,17 +25,6 @@ header {
       position: relative;
     }
 
-    .navigation::before {
-      content: '';
-      width: 10px;
-      left: 50%;
-      transform: translate(-50%);
-      background: red;
-      height: 4px;
-      position: absolute;
-      bottom: 0;
-    }
-
     ul {
       display: flex;
       gap: 1rem;

@@ -23,7 +23,8 @@ export const listPlans = [
     period: '30 Dias',
     benefits: {
       a: `Grátis`,
-    },
+      b: 'Teste'
+    }
   },
   {
     id: 1,
@@ -34,8 +35,8 @@ export const listPlans = [
     benefits: {
       a: `Disponibilizar link para que seus convidados possam confirmar a presença.`,
       b: `Disponibilizar informações sobre seu evento para seus convidados.`,
-      c: `Sistema para verificar quais pessoas confirmaram presença.`,
-    },
+      c: `Sistema para verificar quais pessoas confirmaram presença.`
+    }
   },
   {
     id: 2,
@@ -46,8 +47,8 @@ export const listPlans = [
     benefits: {
       a: `Disponibilizar link para que seus convidados possam confirmar a presença.`,
       b: `Disponibilizar informações sobre seu evento para seus convidados.`,
-      c: `Sistema para verificar quais pessoas confirmaram presença.`,
-    },
+      c: `Sistema para verificar quais pessoas confirmaram presença.`
+    }
   },
   {
     id: 3,
@@ -59,6 +60,6 @@ export const listPlans = [
       a: `Disponibilizar link para que seus convidados possam confirmar a presença.`,
       b: `Disponibilizar informações sobre seu evento para seus convidados.`,
       c: `Sistema para verificar quais pessoas confirmaram presença.`,
-    },
-  },
+    }
+  }
 ]

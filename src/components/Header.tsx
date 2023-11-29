@@ -33,7 +33,7 @@ export default function Header() {
 
   useEffect(() => {
     const updateWindowDimensions = () => {
-      if (window.innerWidth <= 600) {
+      if (window.innerWidth <= 960) {
         setIsMobile(true)
       } else {
         setIsMobile(false)
