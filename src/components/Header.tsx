@@ -1,6 +1,7 @@
 'use client'
 import '@/styles/c-header.scss'
 import Link from 'next/link'
+import Image from 'next/image'
 import { useState, useEffect, useRef } from 'react'
 import { HeaderNav } from './HeaderNav'
 import { CiLogin } from 'react-icons/ci'
@@ -54,6 +55,13 @@ export default function Header() {
         {!isMobile ? (
           <div className='navigation'>
             <div className='logo'>
+              <Image
+                src='/icon.png'
+                alt='logo'
+                width={32}
+                height={32}
+                quality={100}
+              />
               <Link href='/'>Comemore</Link>
             </div>
             <div>
@@ -68,6 +76,13 @@ export default function Header() {
         ) : (
           <div className='navigation'>
             <div className='logo'>
+              <Image
+                src='/icon.png'
+                alt='logo'
+                width={32}
+                height={32}
+                quality={100}
+              />
               <Link href='/'>Comemore</Link>
             </div>
             <IoMenu

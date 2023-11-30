@@ -75,3 +75,13 @@ main {
     }
   }
 }
+
+@media (min-width: 1400px) {
+  h1 {
+    font-size: 45px;
+  }
+
+  p {
+    font-size: 30px;
+  }
+}
