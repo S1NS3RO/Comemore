@@ -6,7 +6,12 @@
   border: none;
   padding: 10px 30px;
   color: white;
-  font-weight: bold;
-  background: linear-gradient(90deg, #9340ff, #ff3c5f);
+  font-weight: 800;
+  background: linear-gradient(90deg, var(--text-purple), var(--text-pink));
   font-size: 17.5px;
+
+  &:hover {
+    color: white;
+    background: linear-gradient(90deg, var(--text-pink), var(--text-purple));
+  }
 }

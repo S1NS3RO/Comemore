@@ -13,18 +13,18 @@ footer {
     color: white;
     max-width: var(--global-max-width);
     margin: 0 auto;
-    gap: 6px;
+    gap: 0.5rem;
     position: relative;
     padding: 1rem;
     flex-direction: column;
 
     .social {
-      font-size: 1.5rem;
       display: flex;
-      gap: .5rem;
+      gap: 0.5rem;
+      font-size: 1.1rem;
 
       svg:hover {
-        color: #cdc5c5;
+        color: var(--text-purple);
       }
     }
 
@@ -32,12 +32,12 @@ footer {
       text-align: center;
 
       li {
-        font-family: monospace;
+        //  font-family: monospace;
         cursor: default;
       }
 
       li:hover {
-        color: #cdc5c5;
+        color: var(--text-purple);
       }
     }
   }

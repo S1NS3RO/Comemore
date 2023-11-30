@@ -2,13 +2,15 @@
   --global-max-width: 1280px;
   --primary-color: #101728;
   --secondary-color: #0c111d;
+  --img-shadow: rgb(31, 65, 187, 0.5);
+  --text-purple: #9340ff;
+  --text-pink: #ff3c5f;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Sans-Serif;
   scroll-behavior: smooth;
 }
 
@@ -20,6 +22,10 @@ a {
   text-decoration: none;
   color: currentColor;
   cursor: pointer;
+  
+  &:hover {
+    color: var(--text-purple);
+  }
 }
 
 body {
@@ -32,6 +38,7 @@ body {
 }
 
 main {
+  font-weight: 400;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -44,9 +51,6 @@ main {
 }
 
 .site-name {
-  color: #9340ff;
-}
-
-.active {
-  background: red;
+  color: var(--text-purple);
+  font-weight: 800;
 }

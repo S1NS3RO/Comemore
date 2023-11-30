@@ -18,8 +18,10 @@ export default function Home() {
         <Image
           src='/1.png'
           alt='Comemore'
-          width='400'
-          height='400'
+          fill
+          quality={80}
+          placeholder='blur'
+          blurDataURL='/blur.jpg'
         />
       </div>
     </div>

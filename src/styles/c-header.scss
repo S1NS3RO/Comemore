@@ -4,6 +4,10 @@ header {
   position: relative;
   background: var(--secondary-color);
 
+.active {
+  background: var(--text-pink);
+}
+
   .header-container {
     display: flex;
     justify-content: space-between;
@@ -17,6 +21,11 @@ header {
     margin: 0 auto;
     position: relative;
     z-index: 2;
+    
+    .logo {
+      color: var(--text-purple);
+      font-weight: 700;
+    }
 
     .navigation {
       display: flex;

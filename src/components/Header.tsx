@@ -1,6 +1,5 @@
 'use client'
 import '@/styles/c-header.scss'
-
 import Link from 'next/link'
 import { useState, useEffect, useRef } from 'react'
 import { HeaderNav } from './HeaderNav'
