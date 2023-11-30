@@ -79,8 +79,8 @@ export default function Header() {
               <Image
                 src='/icon.png'
                 alt='logo'
-                width={32}
-                height={32}
+                width={24}
+                height={24}
                 quality={100}
               />
               <Link href='/'>Comemore</Link>

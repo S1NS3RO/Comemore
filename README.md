@@ -1,5 +1,5 @@
 ## Projeto Comemore!
 
-> [!Desenvolvedores!]
+> [!Desenvolvedores]
 >
 > Douglas Vargas & Vithor Martins
