@@ -20,7 +20,7 @@ export default function Header() {
     const handleCloseMenu = (event: MouseEvent): void => {
       if (
         !menuRef?.current?.contains(event?.target as Node) &&
-        !(event.target as HTMLElement)?.classList?.contains('openmenu')
+        !(event.target as HTMLElement)?.classList?.contains('open_menu')
       ) {
         setIsMenuOpen(false)
       }
@@ -86,8 +86,9 @@ export default function Header() {
               <Link href='/'>Comemore</Link>
             </div>
             <IoMenu
-              className='openmenu'
+              className='open_menu'
               onClick={() => setIsMenuOpen(!isMenuOpen)}
+              style={isMenuOpen && { color: 'var(--text-purple)' }}
             />
           </div>
         )}
