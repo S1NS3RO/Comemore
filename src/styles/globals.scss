@@ -22,7 +22,7 @@ a {
   text-decoration: none;
   color: currentColor;
   cursor: pointer;
-  
+
   &:hover {
     color: var(--text-purple);
   }
@@ -48,6 +48,7 @@ main {
   max-width: var(--global-max-width);
   margin: 0 auto;
   width: 100%;
+  padding: 1rem;
 }
 
 .site-name {
