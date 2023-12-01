@@ -1,4 +1,4 @@
-## Projeto Comemore!
+## Projeto Comemore
 
 > [!Desenvolvedores]
 >
