@@ -9,35 +9,37 @@ const handleBuy = (plano: string): void => {
 
 export default function Comprar() {
   return (
-    <div className="p-planos">
+    <div className='p-planos'>
       <h1>
-        Seja parte do grupo <span className="site-name">Comemore</span>
+        Seja parte do grupo <span className='site-name'>Comemore</span>
       </h1>
-      <div className="plans">
+      <div className='plans'>
         {listPlans.map(({ id, isActive, name, price, period, benefits }) => (
-          <>
-            {isActive && (
-              <div className="plan" key={id}>
-                <h1>Plano {name}</h1>
-                <div className="price">
-                  <span>
-                    {price.toLocaleString('pt-BR', {
-                      style: 'currency',
-                      currency: 'BRL',
-                    })}
-                  </span>
+          <div
+            style={{ display: isActive ? '' : 'none' }}
+            key={id}
+            className='plan'>
+            <h1>Plano {name}</h1>
+            <div className='price'>
+              <span>
+                {price.toLocaleString('pt-BR', {
+                  style: 'currency',
+                  currency: 'BRL'
+                })}
+              </span>
 
-                  <p>{period}</p>
-                </div>
-                <ul>
-                  {Object.values(benefits).map((benefit, index) => (
-                    <li key={index}>{benefit}</li>
-                  ))}
-                </ul>
-                <Button text="Comprar" onClick={() => handleBuy(name)} />
-              </div>
-            )}
-          </>
+              <p>{period}</p>
+            </div>
+            <ul>
+              {Object.values(benefits).map((benefit, index) => (
+                <li key={index}>{benefit}</li>
+              ))}
+            </ul>
+            <Button
+              text='Comprar'
+              onClick={() => handleBuy(name)}
+            />
+          </div>
         ))}
       </div>
     </div>

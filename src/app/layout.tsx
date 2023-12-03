@@ -2,29 +2,19 @@ import '@/styles/globals.scss'
 import type { Metadata } from 'next'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
-import { Nunito } from 'next/font/google'
-
-export const nunito = Nunito({
-  weight: ['400', '500', '700', '800'],
-  style: ['normal'],
-  subsets: ['latin'],
-  display: 'swap'
-})
 
 export const metadata: Metadata = {
   title: 'Comemore',
   description: 'É um prazer comemorar momentos especiais com você'
 }
 
-export default function RootLayout({
-  children
-}: {
+interface RootLayoutProps {
   children: React.ReactNode
-}) {
+}
+
+export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <html
-      lang='pt-br'
-      className={nunito.className}>
+    <html lang='pt-br'>
       <body>
         <Header />
         <main>{children}</main>

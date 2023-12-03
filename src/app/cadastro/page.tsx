@@ -1,17 +1,14 @@
-'use client'
 import '@/styles/p-login.scss'
-import Button from '@/components/Button'
+import '@/styles/c-button.scss'
 import Link from 'next/link'
-
-const handleCreateAccount = () => {
-  alert('Criar conta')
-}
+import AuthActions from '@/modules/auth/actions/auth-actions'
+import PassInput from '@/components/passInput'
 
 export default function Cadastro() {
   return (
     <div className='p-login'>
       <h1>Cadastre-se</h1>
-      <form>
+      <form action={AuthActions.createAccount}>
         <label>
           <input
             type='text'
@@ -29,18 +26,14 @@ export default function Cadastro() {
           />
         </label>
         <label>
-          <input
-            type='password'
-            name='password'
-            placeholder='Senha'
-            required
-          />
+          <PassInput />
         </label>
         <div className='actions'>
-          <Button
-            text='Criar conta'
-            onClick={handleCreateAccount}
-          />
+          <button
+            type='submit'
+            className='site-button'>
+            Criar conta
+          </button>
         </div>
         <Link href='/login'>Já tenho conta!</Link>
       </form>

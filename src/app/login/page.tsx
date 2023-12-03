@@ -1,17 +1,15 @@
-'use client'
 import '@/styles/p-login.scss'
+import '@/styles/c-button.scss'
 import Button from '@/components/Button'
+import PassInput from '@/components/passInput'
 import Link from 'next/link'
-
-const handleLogin = () => {
-  alert('login')
-}
+import AuthActions from '@/modules/auth/actions/auth-actions'
 
 export default function Login() {
   return (
     <div className='p-login'>
       <h1>Conectar-se</h1>
-      <form>
+      <form action={AuthActions.login}>
         <label>
           <input
             type='email'
@@ -21,18 +19,15 @@ export default function Login() {
           />
         </label>
         <label>
-          <input
-            type='password'
-            name='password'
-            placeholder='Senha'
-            required
-          />
+          <PassInput />
         </label>
+        <div className='alerts'>email ou senha inválidos</div>
         <div className='actions'>
-          <Button
-            text='Entrar'
-            onClick={handleLogin}
-          />
+          <button
+            type='submit'
+            className='site-button'>
+            Entrar
+          </button>
           <Button
             text='Criar conta'
             href='/cadastro'

@@ -59,7 +59,7 @@ export const listPlans = [
     benefits: {
       a: `Disponibilizar link para que seus convidados possam confirmar a presença.`,
       b: `Disponibilizar informações sobre seu evento para seus convidados.`,
-      c: `Sistema para verificar quais pessoas confirmaram presença.`,
+      c: `Sistema para verificar quais pessoas confirmaram presença.`
     }
   }
 ]

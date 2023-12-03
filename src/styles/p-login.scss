@@ -15,6 +15,27 @@
     max-width: 300px;
     text-align: center;
 
+    label {
+      position: relative;
+
+      .labelfaeye {
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100%;
+        font-size: 1.5rem;
+        padding: 0 0.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .passcheck {
+        display: none;
+      }
+
+    }
+
     input {
       display: block;
       width: 100%;
@@ -27,6 +48,10 @@
       &::placeholder {
         font-size: 1.1rem;
       }
+    }
+
+    .alerts {
+      display: none;
     }
 
     .actions {
