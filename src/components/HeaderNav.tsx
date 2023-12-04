@@ -1,19 +1,37 @@
 'use client'
-import Link from 'next/link'
 
+// NextJs
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
+
+// Tipagem
 interface HeaderNavProps {
   handleMenuClose?: () => void
 }
+
+/***/
 export function HeaderNav({ handleMenuClose }: HeaderNavProps) {
+  const pathname = usePathname()
+
   return (
     <>
       <nav>
         <ul onClick={() => handleMenuClose && handleMenuClose()}>
           <li>
-            <Link href='/planos'>Planos</Link>
+            <Link
+              className={pathname === '/planos/' ? 'active' : ''}
+              href='/planos'
+              passHref>
+              Ver planos
+            </Link>
           </li>
           <li>
-            <Link href='/about'>Saiba mais</Link>
+            <Link
+              className={pathname === '/about/' ? 'active' : ''}
+              href='/about'
+              passHref>
+              Saber mais
+            </Link>
           </li>
         </ul>
       </nav>

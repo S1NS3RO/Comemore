@@ -3,11 +3,17 @@ header {
   box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 0.2);
   position: relative;
   background: var(--secondary-color);
+  user-select: none;
+
+  .active {
+    color: var(--text-purple);
+  }
 
   .header-container {
     display: flex;
     justify-content: space-between;
     width: 100%;
+    background: var(--secondary-color);
     max-width: var(--global-max-width);
     color: white;
     font-size: 24px;
@@ -15,7 +21,33 @@ header {
     padding: 1rem;
     margin: 0 auto;
     position: relative;
-    z-index: 2;
+    z-index: 3;
+
+    .logo {
+      color: var(--text-purple);
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+
+      img {
+        position: relative;
+        top: -2px;
+      }
+    }
+
+    .navigation {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      position: relative;
+      align-items: center;
+
+      .open_menu {
+        font-size: 1.7rem;
+      }
+    }
 
     ul {
       display: flex;
@@ -53,8 +85,12 @@ header {
     display: flex;
     flex-direction: column;
     padding: 1rem;
-    z-index: 1;
+    z-index: 2;
     box-shadow: -2px 2px 5px 2px rgba(0, 0, 0, 0.2);
+
+    .active {
+      border-left: 2px solid var(--text-purple);
+    }
 
     ul {
       display: flex;
@@ -75,7 +111,8 @@ header {
       }
 
       li:hover {
-        background: hsl(217, 32.6%, 17.5%);
+        border-left: 2px solid var(--text-purple);
+        color: var(--text-purple);
       }
     }
 

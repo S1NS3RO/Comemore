@@ -1,13 +1,14 @@
 // O css principal é mobile first
-.home {
+.p-home {
   gap: 3rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
-  max-width: 100%;
-}
+  width: 100%;
+  padding: 2rem 0.5rem;
+  flex-grow: 1;
 
+<<<<<<< HEAD
 .home-text {
   font-size: 25px;
   gap: 1rem;
@@ -30,14 +31,24 @@
 //css modificado para telas maiores
 @media (min-width: 600px) {
   .home {
+=======
+  .home-text {
+    font-size: 25px;
+    gap: 1rem;
+>>>>>>> 6e70ba69bb24f632b4469e24b26da38d125f7973
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    justify-content: center !important;
-    padding: 3rem;
+    max-width: 500px;
+    z-index: 1;
+
+    h1 {
+      text-align: center;
+    }
   }
 
   .home-img {
+<<<<<<< HEAD
     width: 400px;
     height: 400px;
   }
@@ -62,5 +73,41 @@
     padding: 30px 50px !important;
     font-size: 30px !important;
     border-radius: 50px !important;
+=======
+    width: 300px;
+    height: 300px;
+    box-shadow: 0 0 100px 30px var(--img-shadow);
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+  }
+}
+
+// css notebook
+@media (min-width: 960px) {
+  .p-home {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+
+    .home-text {
+      font-size: 35px;
+    }
+
+    .home-img {
+      width: 400px;
+      height: 400px;
+    }
+  }
+}
+
+@media (min-width: 1400px) {
+  .site-button {
+    padding: 30px 50px;
+    font-size: 30px;
+    border-radius: 50px;
+>>>>>>> 6e70ba69bb24f632b4469e24b26da38d125f7973
   }
 }

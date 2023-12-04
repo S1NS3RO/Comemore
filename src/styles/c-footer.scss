@@ -1,14 +1,43 @@
 footer {
-  display: none;
-  background: blue;
+  width: 100%;
+  box-shadow: 0 -2px 5px 2px rgba(0, 0, 0, 0.2);
+  position: relative;
+  background: var(--secondary-color);
 
   .footer-container {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    font-size: 0.8rem;
+    font-size: 1rem;
     color: white;
     max-width: var(--global-max-width);
+    margin: 0 auto;
+    gap: 0.5rem;
+    position: relative;
+    padding: 1rem;
+    flex-direction: column;
+
+    .social {
+      display: flex;
+      gap: 0.5rem;
+      font-size: 1.1rem;
+
+      svg:hover {
+        color: var(--text-purple);
+      }
+    }
+
+    ul {
+      text-align: center;
+
+      li {
+        cursor: default;
+      }
+
+      li:hover {
+        color: var(--text-purple);
+      }
+    }
   }
 }

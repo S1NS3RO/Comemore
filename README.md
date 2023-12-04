@@ -1,5 +1,5 @@
 ## Projeto Comemore!
 
-Desenvolvimento:
-Douglas Vargas
-Vithor Martins
+> [!Desenvolvedores]
+>
+> Douglas Vargas & Vithor Silva

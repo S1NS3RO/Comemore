@@ -1,8 +1,12 @@
 'use client'
 import '@/styles/c-header.scss'
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 6e70ba69bb24f632b4469e24b26da38d125f7973
 import Link from 'next/link'
+import Image from 'next/image'
 import { useState, useEffect, useRef } from 'react'
 import { HeaderNav } from './HeaderNav'
 import { CiLogin } from 'react-icons/ci'
@@ -22,7 +26,7 @@ export default function Header() {
     const handleCloseMenu = (event: MouseEvent): void => {
       if (
         !menuRef?.current?.contains(event?.target as Node) &&
-        !(event.target as HTMLElement)?.classList?.contains('openmenu')
+        !(event.target as HTMLElement)?.classList?.contains('open_menu')
       ) {
         setIsMenuOpen(false)
       }
@@ -35,7 +39,7 @@ export default function Header() {
 
   useEffect(() => {
     const updateWindowDimensions = () => {
-      if (window.innerWidth <= 600) {
+      if (window.innerWidth <= 960) {
         setIsMobile(true)
       } else {
         setIsMobile(false)
@@ -54,11 +58,24 @@ export default function Header() {
   return (
     <header>
       <div className='header-container'>
+<<<<<<< HEAD
         <div className='logo'>
           <Link href='/'><MdOutlineEventAvailable/>{" "}Comemore</Link>
         </div>
+=======
+>>>>>>> 6e70ba69bb24f632b4469e24b26da38d125f7973
         {!isMobile ? (
-          <>
+          <div className='navigation'>
+            <div className='logo'>
+              <Image
+                src='/icon.png'
+                alt='logo'
+                width={32}
+                height={32}
+                quality={100}
+              />
+              <Link href='/'>Comemore</Link>
+            </div>
             <div>
               <HeaderNav />
             </div>
@@ -67,12 +84,25 @@ export default function Header() {
                 <CiLogin /> Login
               </Link>
             </div>
-          </>
+          </div>
         ) : (
-          <IoMenu
-            className='openmenu'
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          />
+          <div className='navigation'>
+            <div className='logo'>
+              <Image
+                src='/icon.png'
+                alt='logo'
+                width={24}
+                height={24}
+                quality={100}
+              />
+              <Link href='/'>Comemore</Link>
+            </div>
+            <IoMenu
+              className='open_menu'
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              style={isMenuOpen && { color: 'var(--text-purple)' }}
+            />
+          </div>
         )}
       </div>
       {isMenuOpen && (

@@ -17,13 +17,23 @@ export interface IlistPlansProps {
 export const listPlans = [
   {
     id: 0,
+<<<<<<< HEAD
     isActive: false,
     name: "Free",
+=======
+    isActive: true,
+    name: 'Free',
+>>>>>>> 6e70ba69bb24f632b4469e24b26da38d125f7973
     price: 0,
     period: "30 Dias",
     benefits: {
       a: `Grátis`,
+<<<<<<< HEAD
     },
+=======
+      b: 'Teste'
+    }
+>>>>>>> 6e70ba69bb24f632b4469e24b26da38d125f7973
   },
   {
     id: 1,
@@ -52,13 +62,23 @@ export const listPlans = [
   {
     id: 3,
     isActive: true,
+<<<<<<< HEAD
     name: "Super",
+=======
+    name: 'Super',
+>>>>>>> 6e70ba69bb24f632b4469e24b26da38d125f7973
     price: 249.99,
     period: "Anual",
     benefits: {
       a: `Disponibilizar link para que seus convidados possam confirmar a presença.`,
       b: `Disponibilizar informações sobre seu evento para seus convidados.`,
       c: `Sistema para verificar quais pessoas confirmaram presença.`,
+<<<<<<< HEAD
     },
   },
 ];
+=======
+    }
+  }
+]
+>>>>>>> 6e70ba69bb24f632b4469e24b26da38d125f7973
