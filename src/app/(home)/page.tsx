@@ -21,6 +21,7 @@ export default function Home() {
           fill
           quality={100}
           placeholder='blur'
+          blurDataURL='/blur.jpg'
         />
       </div>
     </div>

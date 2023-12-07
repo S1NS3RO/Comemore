@@ -1,6 +1,7 @@
 import { PrismaClient } from '@prisma/client'
 import { redirect } from 'next/navigation'
 import * as bcrypt from 'bcrypt'
+import AuthService from '../services/auth-services'
 
 const prisma = new PrismaClient()
 
@@ -39,6 +40,8 @@ async function login(formData: FormData) {
   if (user) {
     const isMatch = await bcrypt.compare(password, user.password)
     if (isMatch) {
+      await AuthService.createSessionToken({ name: user.name, email: user.email }) // Informações visíveis pelo token jwt
+
       redirect('/')
     } else {
       console.log('Senha incorreta')

@@ -71,6 +71,7 @@ export default function Header() {
               <Link href='/login'>
                 <CiLogin /> Login
               </Link>
+              <Link href='/api/logout'>Logout</Link>
             </div>
           </div>
         ) : (
@@ -105,6 +106,7 @@ export default function Header() {
               href='/login'>
               <CiLogin /> Login
             </Link>
+            <Link href='/api/logout'>Logout</Link>
           </div>
         </div>
       )}
