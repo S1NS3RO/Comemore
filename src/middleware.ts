@@ -1,9 +1,13 @@
 import { NextRequest, NextResponse } from 'next/server'
 import AuthService from './modules/auth/services/auth-services'
 
+// export const config = {
+//   matcher: '/((?!_next/static|_next/image|favicon.ico).*)'
+// }
 export const config = {
-  matcher: '/((?!_next/static|_next/image|favicon.ico).*)'
+  matcher: '/((?!(_next/static|_next/image|favicon.ico|\\.png|\\.jpg|\\.jpeg|\\.gif)).*)'
 }
+
 
 // Lista de rotas que não exigem login
 const publicRoutes = ['/', '/login/', '/cadastro/']
