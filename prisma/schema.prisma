@@ -22,4 +22,5 @@ enum Role {
   Admin
   Client
   User
+  Banned
 }
