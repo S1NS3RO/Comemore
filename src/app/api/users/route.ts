@@ -8,7 +8,10 @@ export async function GET() {
       id: true,
       name: true,
       email: true,
-      password: false
+      password: true,
+      createdAt: true,
+      updatedAt: true,
+      role: true
     }
   })
 
