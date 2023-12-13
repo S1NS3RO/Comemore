@@ -2,11 +2,11 @@ import { NextRequest, NextResponse } from 'next/server'
 import AuthService from './modules/auth/services/auth-services'
 
 export const config = {
-  matcher: '/((?!_next/static|_next/image|favicon.ico).*)'
+  matcher: '/((?!_next/static|_next/image|favicon.ico|.png).*)'
 }
 
 // Lista de rotas que não exigem login
-const publicRoutes = ['/', '/login/', '/cadastro/']
+const publicRoutes = ['/', '/login', '/cadastro']
 
 export async function middleware(req: NextRequest) {
   const pathname = req.nextUrl.pathname
