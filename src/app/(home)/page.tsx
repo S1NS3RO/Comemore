@@ -1,6 +1,6 @@
 import '@/styles/p-home.scss'
-import Image from 'next/image'
 import Button from '@/components/Button'
+import AuthService from '@/modules/auth/services/auth-services'
 
 export default function Home() {
   return (
@@ -15,13 +15,9 @@ export default function Home() {
         />
       </div>
       <div className='home-img'>
-        <Image
+        <img
           src='/1.png'
           alt='Comemore'
-          fill
-          quality={100}
-          placeholder='blur'
-          blurDataURL='/blur.jpg'
         />
       </div>
     </div>

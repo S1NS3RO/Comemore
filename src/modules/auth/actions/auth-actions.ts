@@ -38,9 +38,13 @@ async function login(formData: FormData) {
   })
 
   if (user) {
-    const isMatch = await bcrypt.compare(password, user.password)
+    const isMatch = await bcrypt.compare(password, user.password) // Retorna TRUE se a senha estiver correta
     if (isMatch) {
-      await AuthService.createSessionToken({ name: user.name, email: user.email }) // Informações visíveis pelo token jwt
+      await AuthService.createSessionToken({
+        // Estes são os dados do payload
+        name: user.name,
+        email: user.email
+      }) // Informações visíveis pelo token jwt
 
       redirect('/')
     } else {

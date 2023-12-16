@@ -35,20 +35,18 @@ export default function About() {
             src='/2.png'
             alt='Comemore'
             fill
-            quality={80}
             placeholder='blur'
             blurDataURL='/blur.jpg'
           />
         </div>
       </div>
 
-        <div className='page3'>
-      <div className='about-img'>
+      <div className='page3'>
+        <div className='about-img'>
           <Image
             src='/3.png'
             alt='Comemore'
             fill
-            quality={80}
             placeholder='blur'
             blurDataURL='/blur.jpg'
           />

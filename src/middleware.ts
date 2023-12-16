@@ -6,7 +6,7 @@ export const config = {
 }
 
 // Lista de rotas que não exigem login
-const publicRoutes = ['/', '/login', '/cadastro']
+const publicRoutes = ['/', '/login', '/cadastro', '/about']
 
 export async function middleware(req: NextRequest) {
   const pathname = req.nextUrl.pathname

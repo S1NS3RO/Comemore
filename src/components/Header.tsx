@@ -1,11 +1,11 @@
 'use client'
 import '@/styles/c-header.scss'
 import Link from 'next/link'
-import Image from 'next/image'
 import { useState, useEffect, useRef } from 'react'
 import { HeaderNav } from './HeaderNav'
 import { CiLogin } from 'react-icons/ci'
 import { IoMenu } from 'react-icons/io5'
+import LoginLogout from './LoginLogount'
 
 export default function Header() {
   const [isMobile, setIsMobile] = useState(true)
@@ -55,34 +55,23 @@ export default function Header() {
         {!isMobile ? (
           <div className='navigation'>
             <div className='logo'>
-              <Image
+              <img
                 src='/icon.png'
                 alt='logo'
-                width={32}
-                height={32}
-                quality={100}
               />
               <Link href='/'>Comemore</Link>
             </div>
             <div>
               <HeaderNav />
             </div>
-            <div className='profile'>
-              <Link href='/login'>
-                <CiLogin /> Login
-              </Link>
-              <Link href='/api/logout'>Logout</Link>
-            </div>
+            <LoginLogout />
           </div>
         ) : (
           <div className='navigation'>
             <div className='logo'>
-              <Image
+              <img
                 src='/icon.png'
                 alt='logo'
-                width={24}
-                height={24}
-                quality={100}
               />
               <Link href='/'>Comemore</Link>
             </div>
