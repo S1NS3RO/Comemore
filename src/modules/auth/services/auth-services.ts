@@ -52,7 +52,6 @@ async function dataSession() {
       email: 'douglas@teste.com'
     } // Obter os dados do usuário logado nesta variável
 
-    console.log(userData)
     return userData
   }
 

@@ -5,6 +5,11 @@ header {
   background: var(--secondary-color);
   user-select: none;
 
+  a {
+    display: flex;
+    padding: 1rem 0;
+  }
+
   .active {
     color: var(--text-purple);
   }
@@ -16,10 +21,10 @@ header {
     background: var(--secondary-color);
     max-width: var(--global-max-width);
     color: white;
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 500;
-    padding: 1rem;
     margin: 0 auto;
+    padding: 0 .5rem;
     position: relative;
     z-index: 3;
 
@@ -29,25 +34,14 @@ header {
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 4px;
+      gap: .3rem;
 
       img {
         position: relative;
         top: -2px;
-        width: 32px;
-        height: 32px;
-      }
-    }
-
-    .navigation {
-      display: flex;
-      width: 100%;
-      justify-content: space-between;
-      position: relative;
-      align-items: center;
-
-      .open_menu {
-        font-size: 1.7rem;
+        width: 28px;
+        height: 28px;
+        margin-right: 5px;
       }
     }
 
@@ -69,6 +63,16 @@ header {
         top: 2px;
       }
     }
+
+    .icon-mobile {
+      cursor: pointer;
+    }
+
+    .header-icon-mobile {
+      display: none;
+      align-items: center;
+      font-size: 32px;
+    }
   }
 
   // Versão mobile
@@ -81,7 +85,7 @@ header {
     background: var(--secondary-color);
     color: white;
     width: 250px;
-    animation: openmenu 0.2s ease-out forwards;
+    animation: openmenu .2s ease-out forwards;
     overflow: hidden;
     gap: 1rem;
     display: flex;
@@ -119,7 +123,7 @@ header {
     }
 
     /* .menu-open => .profile */
-    .profile {
+    .profile-mobile {
       a {
         display: flex;
         justify-content: center;
@@ -132,7 +136,7 @@ header {
 
       svg {
         position: relative;
-        top: 2px;
+        top: 3px;
       }
     }
   }
@@ -142,5 +146,17 @@ header {
   to {
     top: calc(0px + 100%);
     transform: translateY(0);
+  }
+}
+
+@media (max-width: 600px) {
+
+  .header-menu,
+  .profile {
+    display: none !important;
+  }
+
+  .header-icon-mobile {
+    display: flex !important;
   }
 }
