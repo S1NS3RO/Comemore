@@ -16,7 +16,7 @@ export async function middleware(req: NextRequest) {
     return NextResponse.next()
   }
 
-  if (session) {
+  if (!session) {
     return NextResponse.next()
   } else {
     const isAPIRoute = pathname.startsWith('/api/')
