@@ -16,9 +16,10 @@ export async function middleware(req: NextRequest) {
     return NextResponse.next()
   }
 
-  if (!session) {
+  if (session) {
     return NextResponse.next()
   } else {
+    return NextResponse.next() // Permite passagem sem login
     const isAPIRoute = pathname.startsWith('/api/')
     if (isAPIRoute) {
       return NextResponse.json({ message: 'Não autorizado' }, { status: 401 })
